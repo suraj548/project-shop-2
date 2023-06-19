@@ -1,2 +1,18 @@
-<p>all-bills works!</p>
-{{bills}}
+<table class="table">
+    <thead>
+      <tr>
+        <th>Bill Number</th>
+        <th>Name</th>
+        <th>Amount Paid</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of bills">
+        <td (click)="onBillNumberClick(item.token_no)">{{ item.token_no }}</td>
+        <td>{{ item.Fname }}</td>
+        <td>{{ item.pay }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+

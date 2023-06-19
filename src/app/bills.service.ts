@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HttpParams } from '@angular/common/http';
 import { HttpClient } from '@angular/common/http'
 import { Weights } from './weights';
 import { Observable } from 'rxjs';
@@ -15,7 +15,13 @@ export class BillsService {
 
 
   getBills():Observable<Weights[]>{  
-    console.log("hi")
+    //console.log("hi")
     return this.http.get<Weights[]>(this.BASE_URL+'/all-bills')
+  }
+
+  getOneBill(token_no: string):Observable<Weights>{
+    //console.log("hi2")
+    const params = new HttpParams().set('token_no', token_no);
+    return this.http.get<Weights>(this.BASE_URL+'/bills',{ params })
   }
 }

@@ -1,0 +1,46 @@
+<div *ngIf="selectedBillDetails" class="bill-details">
+  <h2>Bill Details</h2>
+  <table>
+    <tr>
+      <th>Bill Number</th>
+      <td>{{ selectedBillDetails.token_no }}</td>
+    </tr>
+    <tr>
+      <th>Farmer's Name</th>
+      <td>{{ selectedBillDetails.Fname }}</td>
+    </tr>
+    <tr>
+      <th>Total</th>
+      <td>{{ selectedBillDetails.total }}</td>
+    </tr>
+    <tr>
+      <th>Commission</th>
+      <td>{{ selectedBillDetails.commision }}</td>
+    </tr>
+    <tr>
+      <th>Labor</th>
+      <td>{{ selectedBillDetails.labour }}</td>
+    </tr>
+    <tr>
+      <th>Net Profit</th>
+      <td>{{ selectedBillDetails.pay }}</td>
+    </tr>
+  </table>
+  
+  <h3>Items</h3>
+  <table>
+    <tr>
+      <th>Item Name</th>
+      <th>Weights</th>
+      <th>Price</th>
+      <th>Total</th>
+      <th></th>
+    </tr>
+    <tr *ngFor="let item of selectedBillDetails.objectsArray">
+      <td>{{ item.item }}</td>
+      <td>{{ item.numbers }}</td>
+      <td>{{ item.price }}</td>
+      <td>{{ item.total }}</td>
+    </tr>
+  </table>
+</div>

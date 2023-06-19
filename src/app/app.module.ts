@@ -5,11 +5,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AllBillsComponent } from './components/all-bills/all-bills.component';
+import { BillDetailsComponent } from './components/bill-details/bill-details.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AllBillsComponent
+    AllBillsComponent,
+    BillDetailsComponent,
+    HomeComponent
   ],
   imports: [
     HttpClientModule,
