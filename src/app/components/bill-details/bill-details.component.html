@@ -3,7 +3,7 @@
   <table>
     <tr>
       <th>Bill Number</th>
-      <td>{{ selectedBillDetails.token_no }}</td>
+      <td>{{ selectedBillDetails.bill_no }}</td>
     </tr>
     <tr>
       <th>Farmer's Name</th>
@@ -11,7 +11,7 @@
     </tr>
     <tr>
       <th>Total</th>
-      <td>{{ selectedBillDetails.total }}</td>
+      <td>{{ selectedBillDetails.grandTotal }}</td>
     </tr>
     <tr>
       <th>Commission</th>
@@ -37,10 +37,10 @@
       <th></th>
     </tr>
     <tr *ngFor="let item of selectedBillDetails.objectsArray">
-      <td>{{ item.item }}</td>
+      <td>{{ item.item_name }}</td>
       <td>{{ item.numbers }}</td>
-      <td>{{ item.price }}</td>
-      <td>{{ item.total }}</td>
+      <td>{{ item.item_price }}</td>
+      <td>{{ item.item_total }}</td>
     </tr>
   </table>
 </div>

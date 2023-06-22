@@ -15,13 +15,13 @@ export class BillsService {
 
 
   getBills():Observable<Weights[]>{  
-    //console.log("hi")
+    console.log("hi")
     return this.http.get<Weights[]>(this.BASE_URL+'/all-bills')
   }
 
-  getOneBill(token_no: string):Observable<Weights>{
-    //console.log("hi2")
-    const params = new HttpParams().set('token_no', token_no);
+  getOneBill(bill_no: string):Observable<Weights>{
+    console.log("hi2")
+    const params = new HttpParams().set('bill_no', bill_no);
     return this.http.get<Weights>(this.BASE_URL+'/bills',{ params })
   }
 }
