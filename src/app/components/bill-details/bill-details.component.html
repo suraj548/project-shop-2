@@ -26,21 +26,36 @@
       <td>{{ selectedBillDetails.pay }}</td>
     </tr>
   </table>
-  
+<div *ngIf="selectedBillDetails.objectsArray.length>0">
   <h3>Items</h3>
   <table>
     <tr>
       <th>Item Name</th>
       <th>Weights</th>
       <th>Price</th>
-      <th>Total</th>
-      <th></th>
+      <!-- <th>Total</th> -->
     </tr>
     <tr *ngFor="let item of selectedBillDetails.objectsArray">
       <td>{{ item.item_name }}</td>
       <td>{{ item.numbers }}</td>
       <td>{{ item.item_price }}</td>
-      <td>{{ item.item_total }}</td>
     </tr>
   </table>
+  </div>
+  <div *ngIf="selectedBillDetails.objectsArray_1.length>0">
+    <h3>Items</h3>
+    <table>
+      <tr>
+        <th>Item Name</th>
+        <th>No of Bags</th>
+        <th>Price</th>
+        <!-- <th>Total</th> -->
+      </tr>
+      <tr *ngFor="let item of selectedBillDetails.objectsArray_1">
+        <td>{{ item.item_name }}</td>
+        <td>{{ item.item_no_bags}}</td>
+        <td>{{ item.item_price }}</td>
+      </tr>
+    </table>
+    </div>
 </div>

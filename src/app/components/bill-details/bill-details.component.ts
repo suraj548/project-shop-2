@@ -22,12 +22,12 @@ export class BillDetailsComponent implements OnInit {
       }
     })
   }
-
+ 
   loadBillDetails(billNumber: string) {
     this.billService.getOneBill(billNumber).subscribe(
       (billDetails) => {
         this.selectedBillDetails=billDetails
-        
+        console.log(billDetails.objectsArray_1.length)
       },
       (error: any) => {
         console.error('Error fetching bill details:', error);

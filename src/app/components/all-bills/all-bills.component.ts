@@ -17,7 +17,7 @@ export class AllBillsComponent implements OnInit {
   ngOnInit(): void {
     this.billList.getBills().subscribe((all)=>{
       this.bills=all
-     // console.log(this.bills)
+      console.log(this.bills)
 
     },error=>{
       console.log(error)

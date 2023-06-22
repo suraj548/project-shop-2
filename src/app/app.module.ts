@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { AllBillsComponent } from './components/all-bills/all-bills.component';
 import { BillDetailsComponent } from './components/bill-details/bill-details.component';
 import { HomeComponent } from './components/home/home.component';
+import { AddBillsComponent } from './components/add-bills/add-bills.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AllBillsComponent,
     BillDetailsComponent,
-    HomeComponent
+    HomeComponent,
+    AddBillsComponent
   ],
   imports: [
     HttpClientModule,
