@@ -8,6 +8,8 @@ import { AllBillsComponent } from './components/all-bills/all-bills.component';
 import { BillDetailsComponent } from './components/bill-details/bill-details.component';
 import { HomeComponent } from './components/home/home.component';
 import { AddBillsComponent } from './components/add-bills/add-bills.component';
+import { FormsModule } from '@angular/forms';
+import { MenuComponent } from './components/menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -15,11 +17,13 @@ import { AddBillsComponent } from './components/add-bills/add-bills.component';
     AllBillsComponent,
     BillDetailsComponent,
     HomeComponent,
-    AddBillsComponent
+    AddBillsComponent,
+    MenuComponent
   ],
   imports: [
     HttpClientModule,
     BrowserModule,
+    FormsModule,
     AppRoutingModule
   ],
   providers: [],

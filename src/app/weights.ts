@@ -5,6 +5,8 @@ export class Weights{
     _id:string;
     bill_no: string
     Fname: string
+    advance: number
+    vehicle_charge: number
     objectsArray: Weights2[]
     objectsArray_1: Weights3[] 
     totalBags: number
@@ -12,10 +14,12 @@ export class Weights{
     labour: number
     commision: number
     pay: number
-    constructor(_id:string,bill_no:string,Fname:string,objectsArray: Weights2[],objectsArray_1: Weights3[],totalBags:number,grandTotal:number,labour:number,commision:number,pay:number){
+    constructor(_id:string,bill_no:string,Fname:string,advance:number,vehicle_charge:number,objectsArray: Weights2[],objectsArray_1: Weights3[],totalBags:number,grandTotal:number,labour:number,commision:number,pay:number){
         this._id=_id
         this.bill_no=bill_no
         this.Fname=Fname
+        this.advance=advance
+        this.vehicle_charge=vehicle_charge
         this.objectsArray=objectsArray
         this.objectsArray_1=objectsArray_1
         this.totalBags=totalBags

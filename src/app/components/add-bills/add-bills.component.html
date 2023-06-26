@@ -1,1 +1,46 @@
-<p>add-bills works!</p>
+<label for="fname">First Name:</label>
+<input type="text" id="fname" name="fname" [(ngModel)]="myObject.Fname" required>
+
+<label for="fname">Advance:</label>
+<input type="text" id="advance" name="advance" [(ngModel)]="myObject.advance" required>
+
+<label for="fname">Vehicle Charge:</label>
+<input type="text" id="vc" name="vm" [(ngModel)]="myObject.vehicle_charge" required>
+
+<h3>Add Weights</h3>
+<div>
+  <label for="numbers">Weights:</label>
+  <input id="nymbers" type="text" [(ngModel)]="proxy_numbers">
+  <label for="name">Name:</label>
+  <input id="name" type="text" [(ngModel)]="proxy_name">
+  <label for="price">Price:</label>
+  <input id="price" type="number" [(ngModel)]="proxy_price">
+  <button (click)="addWeight()">Add to Weights</button>
+</div>
+
+<h3>Add Packets</h3>
+<div>
+  <label for="name2">Name:</label>
+  <input id="name2" type="text" [(ngModel)]="proxy_name2">
+  <label for="bags">Number of bags:</label>
+  <input id="bags" type="number" [(ngModel)]="proxy_no_bags2">
+  <label for="price2">Price:</label>
+  <input id="price2" type="number" [(ngModel)]="proxy_price2">
+  <button (click)="addPacket()">Add to Packets</button>
+</div>
+
+<button type="button" (click)="submitBillForm()" >Submit</button>
+
+
+<h4>Weight Items:</h4>
+<ul>
+  <li *ngFor="let obj of myObject.objectsArray">{{ obj.item_name }} - {{ obj.item_price }}</li>
+</ul>
+
+<h4>Packet Items:</h4>
+<ul>
+  <li *ngFor="let obj of myObject.objectsArray_1">{{ obj.item_name }} - {{ obj.item_price }}</li>
+</ul>
+
+
+
