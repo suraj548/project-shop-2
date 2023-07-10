@@ -1,7 +1,7 @@
-<div *ngIf="selectedBillDetails" class="bill-details">
+<div *ngIf="selectedBillDetails" id="bill-details" class="bill-details">
   <h2>Bill Details</h2>
-  <table>
-    <tr>
+  <table> 
+    <tr> 
       <th>Bill Number</th>
       <td>{{ selectedBillDetails.bill_no }}</td>
     </tr>
@@ -35,7 +35,7 @@
     </tr>
   </table>
 <div *ngIf="selectedBillDetails.objectsArray.length>0">
-  <h3>Items</h3>
+  <h3>Weight Items</h3>
   <table>
     <tr>
       <th>Item Name</th>
@@ -51,7 +51,7 @@
   </table>
   </div>
   <div *ngIf="selectedBillDetails.objectsArray_1.length>0">
-    <h3>Items</h3>
+    <h3>Packet Items</h3>
     <table>
       <tr>
         <th>Item Name</th>
@@ -66,4 +66,8 @@
       </tr>
     </table>
     </div>
+</div>
+
+<div class="container">
+<button (click)="generatePDF()">Print Bill</button>
 </div>
