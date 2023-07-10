@@ -1,4 +1,4 @@
-<label for="fname">First Name:</label>
+<label for="fname">Farmer Name:</label>
 <input type="text" id="fname" name="fname" [(ngModel)]="myObject.Fname" required>
 
 <label for="fname">Advance:</label>
@@ -34,12 +34,12 @@
 
 <h4>Weight Items:</h4>
 <ul>
-  <li *ngFor="let obj of myObject.objectsArray">{{ obj.item_name }} - {{ obj.item_price }}</li>
+  <li *ngFor="let obj of myObject.objectsArray">{{ obj.item_name }}  -   {{obj.numbers}}  -  {{ obj.item_price }}</li>
 </ul>
 
 <h4>Packet Items:</h4>
 <ul>
-  <li *ngFor="let obj of myObject.objectsArray_1">{{ obj.item_name }} - {{ obj.item_price }}</li>
+  <li *ngFor="let obj of myObject.objectsArray_1">{{ obj.item_name }}  -  {{obj.item_no_bags}}  -  {{ obj.item_price }}</li>
 </ul>
 
 
