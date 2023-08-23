@@ -4,6 +4,7 @@ import { AddBillsComponent } from './components/add-bills/add-bills.component';
 import { AllBillsComponent } from './components/all-bills/all-bills.component';
 import { BillDetailsComponent } from './components/bill-details/bill-details.component';
 import { HomeComponent } from './components/home/home.component';
+import { LoginComponent } from './components/login/login.component';
 
 const routes: Routes = [
   { 
@@ -23,6 +24,10 @@ const routes: Routes = [
   {
     path: 'add-bill',
     component: AddBillsComponent
+  },
+  {
+    path: 'login',
+    component: LoginComponent
   }
 
 

@@ -1,4 +1,5 @@
 <ul class="nav">
-    <li role="presentation"><a routerLink="all-bills" >List all Bills</a></li>
-    <li role="presentation"><a routerLink="add-bill">Generate Bill</a></li>
+    <li role="presentation"><a routerLink="login">Login</a></li>
+    <li role="presentation"><a routerLink="all-bills" *ngIf="bs.loggedIn()">List all Bills</a></li>
+    <li role="presentation"><a routerLink="add-bill" *ngIf="bs.loggedIn()">Generate Bill</a></li>
 </ul>   

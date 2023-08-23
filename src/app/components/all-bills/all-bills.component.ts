@@ -17,10 +17,14 @@ export class AllBillsComponent implements OnInit {
   ngOnInit(): void {
     this.billList.getBills().subscribe((all)=>{
       this.bills=all
-      console.log(this.bills)
-
+      //console.log(this.bills)
+ 
     },error=>{
-      console.log(error)
+      if(error.status === 401){
+        alert("Unauthorized request! Please Login")
+        this.router.navigate(['/login'])
+      }
+      else{console.log(error)}
     })
   }
 

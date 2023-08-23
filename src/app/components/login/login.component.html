@@ -1,0 +1,17 @@
+<h1>Login Form</h1>
+
+<div class="container">
+<form #loginForm="ngForm" (ngSubmit)="OnLogin()" >
+    <div class="container">
+    <label for="username"><b>Username</b></label>
+    <input type="username" id="username" name="username" placeholder="Enter username" [(ngModel)]="this.bs.creds.username"/><br/>
+
+    <label for="password"><b>Password</b></label>
+    <input type="password" id="password" name="password" placeholder="Enter password"  [(ngModel)]="this.bs.creds.password"/><br/>
+	
+    <button type="submit" >Login</button>
+    <!-- <button type="button" (click)="resetForm()">Reset</button> -->
+    </div>
+</form>
+
+</div> 

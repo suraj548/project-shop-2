@@ -1,4 +1,4 @@
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule,HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -10,6 +10,9 @@ import { HomeComponent } from './components/home/home.component';
 import { AddBillsComponent } from './components/add-bills/add-bills.component';
 import { FormsModule } from '@angular/forms';
 import { MenuComponent } from './components/menu/menu.component';
+import { LoginComponent } from './components/login/login.component';
+import { TokenInterceptorService } from './token-interceptor.service';
+import { AuthGuard } from './auth.guard';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,8 @@ import { MenuComponent } from './components/menu/menu.component';
     BillDetailsComponent,
     HomeComponent,
     AddBillsComponent,
-    MenuComponent
+    MenuComponent,
+    LoginComponent
   ],
   imports: [
     HttpClientModule,
@@ -26,7 +30,12 @@ import { MenuComponent } from './components/menu/menu.component';
     FormsModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [AuthGuard,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptorService,
+      multi: true
+    }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
